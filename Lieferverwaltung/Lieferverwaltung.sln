@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lieferverwaltung", "Lieferverwaltung\Lieferverwaltung.csproj", "{5D90F1C3-75D6-4C2E-AA4B-A206B7E88F22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LieferverwaltungTests", "LieferverwaltungTests\LieferverwaltungTests.csproj", "{C9304AF2-A26D-4116-9491-DB1916D332C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D90F1C3-75D6-4C2E-AA4B-A206B7E88F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D90F1C3-75D6-4C2E-AA4B-A206B7E88F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D90F1C3-75D6-4C2E-AA4B-A206B7E88F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D90F1C3-75D6-4C2E-AA4B-A206B7E88F22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9304AF2-A26D-4116-9491-DB1916D332C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9304AF2-A26D-4116-9491-DB1916D332C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9304AF2-A26D-4116-9491-DB1916D332C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9304AF2-A26D-4116-9491-DB1916D332C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
