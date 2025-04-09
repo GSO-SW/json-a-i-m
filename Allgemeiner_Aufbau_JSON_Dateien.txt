@@ -1,1 +1,6 @@
+Lukas:
 
+Ein JSON Dokument startet mit { und endet mit }.
+Innerhalb dieser Klammern können Felder mit werten erstellt werden: "Name": "Wert"
+Wenn ein Feld ein Objekt ist kann das mit weiteren geschweiften Klammern nach dem Namen festgelegt werden: "Name": { }
+Wenn es ein Array ist werden eckige Klammern verwendet: "Name": [ ]
