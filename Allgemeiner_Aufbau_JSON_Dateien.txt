@@ -4,3 +4,30 @@ Ein JSON Dokument startet mit { und endet mit }.
 Innerhalb dieser Klammern können Felder mit werten erstellt werden: "Name": "Wert"
 Wenn ein Feld ein Objekt ist kann das mit weiteren geschweiften Klammern nach dem Namen festgelegt werden: "Name": { }
 Wenn es ein Array ist werden eckige Klammern verwendet: "Name": [ ]
+
+Florian:
+
+Eine JSON  (JavaScript Object Notation) wird verwendet, um Objekte, Strings, Zahlen, Boolean und Arrays  zu speichern.
+
+Beispiel:
+
+{
+  "name": "Max Mustermann",
+  "alter": 28,
+  "verheiratet": false,
+  "adresse": {
+    "straße": "Beispielweg 5",
+    "stadt": "Musterstadt",
+    "plz": "12345"
+  },
+  "hobbys": ["Kochen", "Fußball", "Gitarre"],
+  "kinder": null
+}
+
+
+	- {} : Ein Object wird mit hilfe von {} dargestellt.
+	- z.B. "name": Der Schlüssel steht immer vor dem Wert und ist immer ein String.
+	- 28 : Die folgenden Werte können einem Schlüssel zugeordnet werden:
+		○ Strings, Zahlen, Boolean, Array, Objekte oder null
+	- Es dürfen keine Kommentar in JSON-Dateien stehen
+	Die Datei endet mit .json
