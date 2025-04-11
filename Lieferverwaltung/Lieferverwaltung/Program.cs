@@ -7,6 +7,8 @@
         {
             BeispielobjekteAnlegen();
             Console.WriteLine(lieferungen.Count);
+
+            WriteToJSON();
         }
 
         static void BeispielobjekteAnlegen()
@@ -28,6 +30,42 @@
                 , "CQX55KMY5RW"
                 , "07708"
             ));
+        }
+
+        static void WriteToJSON()
+        {
+            string data = "{\n" +
+                "\t\"anzahl\": " + lieferungen.Count + ",\n" +
+                "\t\"lieferungen\": ";
+
+            if (lieferungen.Count > 0)
+            {
+                data += "[\n";
+
+                Lieferung lastItem = lieferungen[lieferungen.Count - 1];
+
+                foreach (Lieferung l in lieferungen)
+                {
+                    data += "\t\t{\n" +
+                        "\t\t\t\"datum\": \"" + l.Datum.ToString() + "\",\n" +
+                        "\t\t\t\"sendungsnummer\": \"" + l.Sendungsnummer + "\",\n" +
+                        "\t\t\t\"plz\": " + Convert.ToInt32(l.PLZ) + "\n" +
+                        "\t\t}";
+
+                    if (l != lastItem)
+                    {
+                        data += ",";
+                    }
+
+                    data += "\n";
+                }
+
+                data += "\t]\n";
+            }
+
+            data += "}";
+
+            File.WriteAllText("lukas_data.json", data);
         }
     }
 }
