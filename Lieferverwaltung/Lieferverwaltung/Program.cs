@@ -1,4 +1,8 @@
-﻿namespace Lieferverwaltung
+﻿using System.ComponentModel;
+using System.Data;
+using System.Xml.Linq;
+
+namespace Lieferverwaltung
 {
     class Program
     {
@@ -7,6 +11,52 @@
         {
             BeispielobjekteAnlegen();
             Console.WriteLine(lieferungen.Count);
+
+            static void FileWriteToJsonFlorianObjekteAuslessen()
+            {
+                string pfad = "C:\\Users\\lingn\\Desktop\\Schule\\Schule\\Json_Uebung\\json-a-i-m\\Data_Florian.JSON";
+                string inhalt = "{\n" +
+                   $"  \"anzahl\": {lieferungen.Count},\n" +
+                    "  \"lieferungen\": \n   [\n";
+
+                for (int i = 0; i < lieferungen.Count; i++)
+                {
+                    string speicher;
+
+                    if (lieferungen.Count - i == 1)
+                    {
+                        speicher =
+                       "    {\n" +
+                       $"      \"datum\": \"{lieferungen[i].Datum}\",\n" +
+                       $"      \"sendungsnummer\": \"{lieferungen[i].Sendungsnummer}\",\n" +
+                       $"      \"plz\": {Convert.ToInt32(lieferungen[i].PLZ)}\n" +
+                       "     }\n" +
+                          "  ]\n" +
+                          "}";
+                        inhalt += speicher;
+                    }
+                    else
+                    {
+                        speicher =
+                         "    {\n" +
+                         $"      \"datum\": \"{lieferungen[i].Datum}\",\n" +
+                         $"      \"sendungsnummer\": \"{lieferungen[i].Sendungsnummer}\",\n" +
+                         $"      \"plz\": {Convert.ToInt32(lieferungen[i].PLZ)}\n" +
+                         "     },\n";
+                        inhalt += speicher;
+                    }
+
+
+
+                    File.WriteAllText(pfad, inhalt);
+
+                }
+            }
+
+            FileWriteToJsonFlorianObjekteAuslessen();
+
+
+
         }
 
         static void BeispielobjekteAnlegen()
